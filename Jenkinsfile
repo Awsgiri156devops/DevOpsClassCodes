@@ -13,10 +13,19 @@ tools{
 		}
 	}
 	
-	stage('Build stage'){
+	stage('Version stage'){
 		steps{
 			script{
-			sh "mvn package"
+			sh "mvn --version"
+			}
+		}
+	
+	}
+		
+	stage('Compile stage'){
+		steps{
+			script{
+			sh "mvn compile"
 			}
 		}
 	
